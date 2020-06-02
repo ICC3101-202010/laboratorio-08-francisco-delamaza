@@ -27,7 +27,7 @@ namespace Laboratorio_8
                 string este = l.n_dueño;
                 string aee = l.id;
                 string eea = l.horario;
-                richTextBox1.Text = (hola, este, aee, eea).ToString();
+                richTextBox1.Text = "Local: " + hola.ToString() +"  Dueño: " + este.ToString() + "  ID: "+ aee.ToString()+ "  Horario: " + eea.ToString();
             }
             catch
             {
@@ -38,7 +38,7 @@ namespace Laboratorio_8
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
-           
+            
         }
 
         private void Agregar_Click(object sender, EventArgs e)
@@ -50,6 +50,11 @@ namespace Laboratorio_8
             bool mesas = checkBox1.Checked;
             Restaurante r = new Restaurante(nombre, dueño, id, horario, mesas);
             loc.Add(r);
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            
         }
 
         private void Restaurante_Click(object sender, EventArgs e)
@@ -68,6 +73,11 @@ namespace Laboratorio_8
             string salas = textBox9.Text;
             Cine c = new Cine(nombre, dueño, id, horario, salas);
             loc.Add(c);
+            textBox5.Clear();
+            textBox6.Clear();
+            textBox7.Clear();
+            textBox8.Clear();
+            textBox9.Clear();
 
 
         }
@@ -89,6 +99,11 @@ namespace Laboratorio_8
             string categoria = textBox14.Text;
             Tienda t = new Tienda(nombre, dueño, id, horario, categoria);
             loc.Add(t);
+            textBox10.Clear();
+            textBox11.Clear();
+            textBox12.Clear();
+            textBox13.Clear();
+            textBox14.Clear();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -128,6 +143,13 @@ namespace Laboratorio_8
         private void Volveri_Click(object sender, EventArgs e)
         {
             panel2.Visible = false;
+        }
+
+        private void Lista_locales_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2(loc);
+            f2.Show();
+            
         }
     }
 }

@@ -119,6 +119,7 @@
             this.Lista_locales.TabIndex = 2;
             this.Lista_locales.Text = "Lista de locales";
             this.Lista_locales.UseVisualStyleBackColor = true;
+            this.Lista_locales.Click += new System.EventHandler(this.Lista_locales_Click);
             // 
             // contextMenuStrip1
             // 
@@ -143,7 +144,7 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.cine);
             this.panel1.Controls.Add(this.Restaurante);
-            this.panel1.Location = new System.Drawing.Point(3, -5);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(616, 233);
             this.panel1.TabIndex = 4;
@@ -533,7 +534,7 @@
             this.panel2.Controls.Add(this.textBoxID);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.label16);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(12, -2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(581, 251);
             this.panel2.TabIndex = 5;
