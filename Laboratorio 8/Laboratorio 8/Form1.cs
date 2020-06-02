@@ -17,9 +17,24 @@ namespace Laboratorio_8
             InitializeComponent();
         }
         List<Locales> loc = new List<Locales>();
-        
-        
 
+
+        private void Info(Locales l)
+        {
+            try
+            {
+                string hola = l.nombre;
+                string este = l.n_dueño;
+                string aee = l.id;
+                string eea = l.horario;
+                richTextBox1.Text = (hola, este, aee, eea).ToString();
+            }
+            catch
+            {
+                richTextBox1.Text = "No existe el Id";
+            }
+            
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
@@ -93,6 +108,26 @@ namespace Laboratorio_8
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            string ids = textBoxID.Text;
+            var l = loc.Where(Locales => Locales.id == ids).FirstOrDefault();
+            richTextBox1.Clear();
+            Info(l);
+
+
+        }
+
+        private void info_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+        }
+
+        private void Volveri_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
         }
     }
 }

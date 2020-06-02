@@ -76,18 +76,26 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.Buscar = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Volveri = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelr.SuspendLayout();
             this.panelc.SuspendLayout();
             this.panelt.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Agregar_local
             // 
             this.Agregar_local.Location = new System.Drawing.Point(12, 27);
             this.Agregar_local.Name = "Agregar_local";
-            this.Agregar_local.Size = new System.Drawing.Size(490, 23);
+            this.Agregar_local.Size = new System.Drawing.Size(574, 23);
             this.Agregar_local.TabIndex = 0;
             this.Agregar_local.Text = "Agregar local";
             this.Agregar_local.UseVisualStyleBackColor = true;
@@ -97,16 +105,17 @@
             // 
             this.info.Location = new System.Drawing.Point(12, 68);
             this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(468, 23);
+            this.info.Size = new System.Drawing.Size(574, 23);
             this.info.TabIndex = 1;
             this.info.Text = "Revisar informacion del local";
             this.info.UseVisualStyleBackColor = true;
+            this.info.Click += new System.EventHandler(this.info_Click);
             // 
             // Lista_locales
             // 
             this.Lista_locales.Location = new System.Drawing.Point(12, 111);
             this.Lista_locales.Name = "Lista_locales";
-            this.Lista_locales.Size = new System.Drawing.Size(437, 23);
+            this.Lista_locales.Size = new System.Drawing.Size(574, 23);
             this.Lista_locales.TabIndex = 2;
             this.Lista_locales.Text = "Lista de locales";
             this.Lista_locales.UseVisualStyleBackColor = true;
@@ -134,10 +143,9 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.cine);
             this.panel1.Controls.Add(this.Restaurante);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(3, -5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(610, 237);
+            this.panel1.Size = new System.Drawing.Size(616, 233);
             this.panel1.TabIndex = 4;
             this.panel1.Visible = false;
             // 
@@ -145,7 +153,7 @@
             // 
             this.Restaurante.Location = new System.Drawing.Point(84, 26);
             this.Restaurante.Name = "Restaurante";
-            this.Restaurante.Size = new System.Drawing.Size(75, 23);
+            this.Restaurante.Size = new System.Drawing.Size(92, 23);
             this.Restaurante.TabIndex = 0;
             this.Restaurante.Text = "Restaurante";
             this.Restaurante.UseVisualStyleBackColor = true;
@@ -155,7 +163,7 @@
             // 
             this.cine.Location = new System.Drawing.Point(84, 67);
             this.cine.Name = "cine";
-            this.cine.Size = new System.Drawing.Size(75, 23);
+            this.cine.Size = new System.Drawing.Size(92, 23);
             this.cine.TabIndex = 1;
             this.cine.Text = "Cine";
             this.cine.UseVisualStyleBackColor = true;
@@ -165,7 +173,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(84, 111);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(92, 23);
             this.button3.TabIndex = 2;
             this.button3.Text = "Tienda";
             this.button3.UseVisualStyleBackColor = true;
@@ -175,16 +183,16 @@
             // 
             this.Recreacional.Location = new System.Drawing.Point(84, 156);
             this.Recreacional.Name = "Recreacional";
-            this.Recreacional.Size = new System.Drawing.Size(75, 23);
+            this.Recreacional.Size = new System.Drawing.Size(92, 23);
             this.Recreacional.TabIndex = 3;
-            this.Recreacional.Text = "button4";
+            this.Recreacional.Text = "Recreacional";
             this.Recreacional.UseVisualStyleBackColor = true;
             // 
             // Volver
             // 
             this.Volver.Location = new System.Drawing.Point(84, 195);
             this.Volver.Name = "Volver";
-            this.Volver.Size = new System.Drawing.Size(75, 23);
+            this.Volver.Size = new System.Drawing.Size(92, 23);
             this.Volver.TabIndex = 4;
             this.Volver.Text = "Volver";
             this.Volver.UseVisualStyleBackColor = true;
@@ -517,11 +525,79 @@
             this.label15.TabIndex = 11;
             this.label15.Text = "nombre";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.Volveri);
+            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Controls.Add(this.Buscar);
+            this.panel2.Controls.Add(this.textBoxID);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(581, 251);
+            this.panel2.TabIndex = 5;
+            this.panel2.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(12, 27);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(62, 13);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Informacion";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(12, 53);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 13);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Ingrese ID";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(12, 85);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(170, 20);
+            this.textBoxID.TabIndex = 2;
+            // 
+            // Buscar
+            // 
+            this.Buscar.Location = new System.Drawing.Point(12, 128);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(75, 23);
+            this.Buscar.TabIndex = 3;
+            this.Buscar.Text = "Buscar";
+            this.Buscar.UseVisualStyleBackColor = true;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(239, 24);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(347, 192);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
+            // 
+            // Volveri
+            // 
+            this.Volveri.Location = new System.Drawing.Point(12, 164);
+            this.Volveri.Name = "Volveri";
+            this.Volveri.Size = new System.Drawing.Size(75, 23);
+            this.Volveri.TabIndex = 5;
+            this.Volveri.Text = "Volver";
+            this.Volveri.UseVisualStyleBackColor = true;
+            this.Volveri.Click += new System.EventHandler(this.Volveri_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 237);
+            this.ClientSize = new System.Drawing.Size(777, 357);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Lista_locales);
             this.Controls.Add(this.info);
@@ -536,6 +612,8 @@
             this.panelc.PerformLayout();
             this.panelt.ResumeLayout(false);
             this.panelt.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -589,6 +667,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button Buscar;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button Volveri;
     }
 }
 
